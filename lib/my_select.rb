@@ -5,11 +5,13 @@ def my_select(collection)
   while i < collection.size
     
     if yield collection[i]
-      true_values
+      true_values << collection[i]
     end
     
     i += 1
   
   end
+  
+  true_values
   
 end
