@@ -3,8 +3,13 @@ def my_select(collection)
   true_values = []
   
   while i < collection.size
-    yield collection[i]
+    
+    if yield collection[i]
+      true_values
+    end
+    
     i += 1
+  
   end
   
 end
